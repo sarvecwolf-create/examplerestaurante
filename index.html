@@ -3,82 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PatioTime - Restaurante Gourmet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>PatioTime Guatemala | Carta Gourmet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
+    <header class="site-header">
         <div class="logo">PATIOTIME</div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#menu">Menú</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto" class="btn-reserva">Reservar</a></li>
-            </ul>
+        <nav class="main-nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#menu-seccion">Nuestra Carta</a>
+            <a href="#" class="btn-border">Reservaciones</a>
         </nav>
     </header>
 
-    <section id="inicio" class="hero">
+    <section id="inicio" class="hero-short">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span class="subtitle">Experiencia Gastronómica</span>
-            <h1>Sabor Auténtico en cada Bocado</h1>
-            <p>Descubre la fusión perfecta entre tradición y vanguardia.</p>
-            <a href="#menu" class="btn-primary">Ver Menú</a>
+            <span class="top-label">Guatemala</span>
+            <h1>Menú Degustación</h1>
         </div>
     </section>
 
-    <section id="menu" class="menu-section">
+    <section class="menu-filter-container">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-target="todos">Todos</button>
+            <button class="filter-btn" data-target="desayunos">Desayunos</button>
+            <button class="filter-btn" data-target="fuertes">Platos Fuertes</button>
+            <button class="filter-btn" data-target="bebidas">Café y Bebidas</button>
+        </div>
+    </section>
+
+    <section id="menu-seccion" class="menu-display">
         <div class="container">
-            <h2 class="section-title">Nuestro Menú</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" alt="Ensalada Fresh">
-                    <div class="menu-info">
-                        <h3>Ensalada de Estación <span>$12</span></h3>
-                        <p>Vegetales orgánicos, frutos secos y vinagreta de miel.</p>
+            
+            <div class="menu-category" id="desayunos">
+                <h2 class="cat-title">Desayunos del Huerto</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <span class="item-name">Desayuno Chapín Especial</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">Q75</span>
+                        </div>
+                        <p class="item-desc">Huevos al gusto, plátanos fritos, frijoles volteados, crema y queso fresco.</p>
                     </div>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="Pizza Gourmet">
-                    <div class="menu-info">
-                        <h3>Pizza Artesanal <span>$18</span></h3>
-                        <p>Masa madre, mozzarella de búfala y albahaca fresca.</p>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <span class="item-name">Omelette de la Casa</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">Q65</span>
+                        </div>
+                        <p class="item-desc">Tres huevos, champiñones salteados, espinaca y queso de cabra.</p>
                     </div>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Corte de Carne">
-                    <div class="menu-info">
-                        <h3>Solomillo al Grill <span>$25</span></h3>
-                        <p>Acompañado de puré trufado y reducción de vino tinto.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=500&q=80" alt="Postre">
-                    <div class="menu-info">
-                        <h3>Volcán de Chocolate <span>$10</span></h3>
-                        <p>Corazón fundido con helado de vainilla francesa.</p>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <span class="item-name">Panqueques con Frutos Rojos</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">Q55</span>
+                        </div>
+                        <p class="item-desc">Servidos con miel de maple pura y mantequilla artesanal.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="menu-category" id="fuertes">
+                <h2 class="cat-title">Almuerzos y Cenas</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <span class="item-name">Puyazo Premium (12oz)</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">Q185</span>
+                        </div>
+                        <p class="item-desc">Corte nacional seleccionado, acompañado de papas al romero y chirmol.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <span class="item-name">Salmón en Salsa de Eneldo</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">Q145</span>
+                        </div>
+                        <p class="item-desc">Filete de salmón fresco a la plancha sobre cama de espárragos.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <span class="item-name">Pepian de Polto Tradicional</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">Q95</span>
+                        </div>
+                        <p class="item-desc">Receta ancestral servida con arroz blanco y tortillas negras.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="bebidas">
+                <h2 class="cat-title">Barista & Cavas</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <span class="item-name">Cappuccino Italiano</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">Q28</span>
+                        </div>
+                        <p class="item-desc">Doble shot de espresso con microespuma de leche sedosa.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <span class="item-name">Limonada con Hierbabuena</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">Q22</span>
+                        </div>
+                        <p class="item-desc">Refrescante mezcla natural con hojas de nuestro huerto.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <span class="item-name">Copa de Vino Tinto</span>
+                            <span class="item-dots"></span>
+                            <span class="item-price">Q45</span>
+                        </div>
+                        <p class="item-desc">Selección de la casa (Malbec o Cabernet Sauvignon).</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <footer id="contacto">
-        <div class="footer-content">
-            <h3>Visítanos</h3>
-            <p>Calle Gastronómica 123, Ciudad Gourmet</p>
-            <p>Abierto: Lun-Dom 12:00 PM - 11:00 PM</p>
-            <div class="socials">
-                <span>Instagram</span> | <span>Facebook</span>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2024 PatioTime - Todos los derechos reservados.
-        </div>
+    <footer class="footer">
+        <p>PATIOTIME GUATEMALA — Av. Reforma, Zona 10</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
